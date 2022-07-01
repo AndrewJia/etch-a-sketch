@@ -10,6 +10,11 @@ body {
     flex-wrap: wrap;
     height: 600px;
     width: 600px;
+    background-color: aliceblue;
+    border-style: solid;
+    border-width: 8px;
+    border-color: aliceblue;
+    border-radius: 8px;
 }
 
 .block {

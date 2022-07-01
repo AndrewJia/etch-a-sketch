@@ -4,9 +4,14 @@ body {
 }
 
 .container {
+    margin: auto;
+    margin-top: 160px;
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     height: 600px;
     width: 600px;
+}
+
+.block {
+    background-color: aliceblue;
 }

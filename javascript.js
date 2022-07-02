@@ -28,11 +28,10 @@ function removeAllChildNodes(parent) {
 }
 
 function updateColor(block) {
-    console.log(block);
     if (color != 'rainbow') {
         block.style.backgroundColor = color;
     } else {
-        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
         block.style.backgroundColor = randomColor;
     }
 
@@ -43,8 +42,10 @@ let color = '#deb887';
 
 const container = document.querySelector('.container');
 const clear = document.querySelector('.clear');
-console.log(clear);
 const resize = document.querySelector('.resize');
+const black = document.querySelector('.black');
+const burlywood = document.querySelector('.burlywood');
+const rainbow = document.querySelector('.rainbow');
 
 clear.addEventListener("click", function(e) {
     generateGrid(dimensions);
@@ -58,6 +59,18 @@ resize.addEventListener("click", function(e) {
         dimensions = input;
         generateGrid(dimensions);
     }
+});
+
+black.addEventListener("click", function(e) {
+    color = '#000000'
+});
+
+burlywood.addEventListener("click", function(e) {
+    color = '#deb887'
+});
+
+rainbow.addEventListener("click", function(e) {
+    color = 'rainbow';
 });
 
 

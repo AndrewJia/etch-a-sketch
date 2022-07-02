@@ -9,10 +9,11 @@ function generateGrid(blockCount) {
     for(let i = 0; i < blockCount*blockCount; i++) {
         const currBlock = document.createElement('div');
         //currBlock.classList.add('block');
-        currBlock.textContent = i;
+        //currBlock.textContent = i;
         currBlock.style.cssText = `height: ${blockSize}; width: ${blockSize};`;   
         currBlock.addEventListener("mouseenter", function(e) {
-            currBlock.classList.add('colored');
+            //currBlock.style.backgroundColor = color;
+            updateColor(currBlock);
         });
         
         container.appendChild(currBlock);
@@ -26,11 +27,19 @@ function removeAllChildNodes(parent) {
     }
 }
 
-function updateColor() {
-    
+function updateColor(block) {
+    console.log(block);
+    if (color != 'rainbow') {
+        block.style.backgroundColor = color;
+    } else {
+        let randomColor = Math.floor(Math.random()*16777215).toString(16);
+        block.style.backgroundColor = randomColor;
+    }
+
 }
 
 let dimensions = 12; //default to 12 x 12 grid
+let color = '#deb887';
 
 const container = document.querySelector('.container');
 const clear = document.querySelector('.clear');

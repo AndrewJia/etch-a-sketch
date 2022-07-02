@@ -8,22 +8,39 @@ h1 {
     color: palevioletred;
     text-align: center;
     font-size: 76px;
+    margin: 32px;
 }
 
-.container {
-    margin: auto;
-    margin-top: 160px;
+.main {
     display: flex;
-    flex-wrap: wrap;
-    height: 600px;
-    width: 600px;
+    justify-content: center;
+    gap: 32px;
+}
+
+.container,
+.side {
     background-color: aliceblue;
     border-style: solid;
     border-width: 8px;
-    border-color: aliceblue;
     border-radius: 16px;
+    border-color: aliceblue;
+}
+
+.container {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
 }
 
 .colored {
     background-color: burlywood;
+}
+
+.side {
+    height: 600px;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
 }

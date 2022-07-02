@@ -1,14 +1,27 @@
+* {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: palevioletred;
+    text-align: center;
+}
+
 body {
     background-image: url('./images/Bob-Ross.webp');
     background-size: 20%;
 }
 
 h1 {
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: palevioletred;
-    text-align: center;
+    
     font-size: 76px;
     margin: 32px;
+}
+
+button {
+    background-color: rgb(177, 197, 202);
+    font-size: 24px;
+    padding: 12px 0px;
+    border-style: solid;
+    border-color: darkblue;
+    border-radius: 4px;
 }
 
 .main {
@@ -39,8 +52,11 @@ h1 {
 }
 
 .side {
-    height: 600px;
+    box-sizing: border-box;
+    padding: 16px;
+    height: 616px;
     width: 160px;
     display: flex;
     flex-direction: column;
+    gap: 32px;
 }

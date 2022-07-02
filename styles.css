@@ -3,6 +3,13 @@ body {
     background-size: 20%;
 }
 
+h1 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: palevioletred;
+    text-align: center;
+    font-size: 76px;
+}
+
 .container {
     margin: auto;
     margin-top: 160px;
@@ -14,9 +21,9 @@ body {
     border-style: solid;
     border-width: 8px;
     border-color: aliceblue;
-    border-radius: 8px;
+    border-radius: 16px;
 }
 
-.block {
-    background-color: aliceblue;
+.colored {
+    background-color: burlywood;
 }

@@ -8,9 +8,13 @@ function generateGrid(blockCount) {
     //add blockCount^2 number of blocks to container
     for(let i = 0; i < blockCount*blockCount; i++) {
         const currBlock = document.createElement('div');
-        currBlock.classList.add('block');
+        //currBlock.classList.add('block');
         currBlock.textContent = i;
-        currBlock.style.cssText = `height: ${blockSize}; width: ${blockSize};`;     
+        currBlock.style.cssText = `height: ${blockSize}; width: ${blockSize};`;   
+        currBlock.addEventListener("mouseenter", function(e) {
+            currBlock.classList.add('colored');
+        });
+        
         container.appendChild(currBlock);
     }
 }
@@ -22,8 +26,20 @@ function removeAllChildNodes(parent) {
     }
 }
 
+function updateColor() {
+    
+}
+
+let dimensions = 12; //default to 12 x 12 grid
 
 const container = document.querySelector('.container');
+const clear = document.querySelector('.clear');
+console.log(clear);
+const resize = document.querySelector('.resize');
 
-generateGrid(12);
-generateGrid(13);
+clear.addEventListener("click", function(e) {
+    generateGrid(dimensions);
+});
+
+
+generateGrid(dimensions);

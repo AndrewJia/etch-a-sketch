@@ -41,5 +41,15 @@ clear.addEventListener("click", function(e) {
     generateGrid(dimensions);
 });
 
+resize.addEventListener("click", function(e) {
+    let input = parseInt(prompt("Please enter desired grid length (from 1 to 100)"));
+    if(isNaN(input) || input < 0 || input > 100) {
+        console.log('invalid input to resize');
+    } else {
+        dimensions = input;
+        generateGrid(dimensions);
+    }
+});
+
 
 generateGrid(dimensions);

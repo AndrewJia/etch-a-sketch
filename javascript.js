@@ -27,6 +27,7 @@ function removeAllChildNodes(parent) {
     }
 }
 
+//given a block, update its color based on color variable
 function updateColor(block) {
     if (color != 'rainbow') {
         block.style.backgroundColor = color;
@@ -34,18 +35,20 @@ function updateColor(block) {
         let randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
         block.style.backgroundColor = randomColor;
     }
-
 }
 
-let dimensions = 12; //default to 12 x 12 grid
-let color = '#deb887';
+let dimensions = 12;      //default to 12 x 12 grid
+let color = '#deb887';    //default to burlywood (tan-ish color)
 
-const container = document.querySelector('.container');
-const clear = document.querySelector('.clear');
+const container = document.querySelector('.container');   //container for the blocks
+const clear = document.querySelector('.clear');           //this and following are buttons
 const resize = document.querySelector('.resize');
 const background = document.querySelector('.background');
 const black = document.querySelector('.black');
 const burlywood = document.querySelector('.burlywood');
+const olivedrab = document.querySelector('.olivedrab'); //#6b8e23
+const powderblue = document.querySelector('.powderblue'); //#b0e0e6
+const goldenrod = document.querySelector('.goldenrod'); //#daa520
 const rainbow = document.querySelector('.rainbow');
 
 clear.addEventListener("click", function(e) {
@@ -72,6 +75,18 @@ black.addEventListener("click", function(e) {
 
 burlywood.addEventListener("click", function(e) {
     color = '#deb887'
+});
+
+olivedrab.addEventListener("click", function(e) {
+    color = '#6b8e23'
+});
+
+powderblue.addEventListener("click", function(e) {
+    color = '#b0e0e6'
+});
+
+goldenrod.addEventListener("click", function(e) {
+    color = '#daa520'
 });
 
 rainbow.addEventListener("click", function(e) {

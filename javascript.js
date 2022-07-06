@@ -43,6 +43,7 @@ let color = '#deb887';
 const container = document.querySelector('.container');
 const clear = document.querySelector('.clear');
 const resize = document.querySelector('.resize');
+const background = document.querySelector('.background');
 const black = document.querySelector('.black');
 const burlywood = document.querySelector('.burlywood');
 const rainbow = document.querySelector('.rainbow');
@@ -60,6 +61,10 @@ resize.addEventListener("click", function(e) {
         generateGrid(dimensions);
     }
 });
+
+background.addEventListener("click", function(e) {
+    document.body.classList.toggle('bgClass');
+})
 
 black.addEventListener("click", function(e) {
     color = '#000000'

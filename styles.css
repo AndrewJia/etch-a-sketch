@@ -5,8 +5,13 @@
 }
 
 body {
-    background-image: url('./images/Bob-Ross.webp');
+    background-color: papayawhip;
+    /*background-image: url('./images/Bob-Ross.webp');*/
     background-size: 20%;
+}
+
+.bgClass {
+    background-image: url('./images/Bob-Ross.webp');
 }
 
 h1 {
@@ -18,7 +23,7 @@ button {
     background-color: rgb(177, 197, 202);
     box-sizing: border-box;
     height: 56px;
-    width: 112px;
+    width: 160px;
     font-size: 24px;
     padding: 12px 0px;
     border-style: solid;

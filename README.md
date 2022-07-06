@@ -8,6 +8,6 @@ Like an etch-a-sketch, except you draw with your mouse! Completed July 6th, 2022
 * Resizeable canvas!
 * Soft and calm color palette!
 
-Check it out on Pages now ↘↘↘
+Check it out on Pages now → → → 
 
 Built according to Odin Project guidelines.

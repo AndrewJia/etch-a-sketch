@@ -6,7 +6,6 @@
 
 body {
     background-color: papayawhip;
-    /*background-image: url('./images/Bob-Ross.webp');*/
     background-size: 20%;
 }
 
@@ -63,8 +62,4 @@ button {
     display: flex;
     flex-direction: column;
     gap: 32px;
-}
-
-#right button {
-    width: 160px;
 }
